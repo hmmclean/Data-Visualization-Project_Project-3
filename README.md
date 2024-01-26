@@ -12,4 +12,5 @@ Using the Belly Button Biodiversity dataset, an interactive dashboard was create
         * app - javascript file which imports the data from the json file and creates all the dashboards linked to the html file.
 
 # References and Resources
+* National Park Service API - https://www.nps.gov/subjects/developer/api-documentation.htm
 * ChatGPT - https://chat.openai.com/
