@@ -55,38 +55,41 @@
       <div class="content-container">
         <h4>FIND A PARK</h4>
 
-        <!-- Dropdowns with labels -->
-        <label for="parkType">SEARCH BY PARK</label>
-        <select id="parkType" name="parkName"></select>
+        <!-- Add a form with the id 'parkForm' -->
+        <form id="parkForm">
+          <!-- Dropdowns with labels -->
+          <label for="parkType">SEARCH BY PARK</label>
+          <select id="parkType" name="parkName"></select>
 
-        <label for="activityType">SEARCH BY ACTIVITY</label>
-        <select id="activityType" name="activityName">
-          <option value="" selected disabled hidden></option>
-          <option value="hiking">Hiking</option>
-          <option value="camping">Camping</option>
-          <option value="wildlifeObservation">Wildlife Observation</option>
-        </select>
+          <label for="activityType">SEARCH BY ACTIVITY</label>
+          <select id="activityType" name="activityName">
+            <option value="" selected disabled hidden></option>
+            <option value="hiking">Hiking</option>
+            <option value="camping">Camping</option>
+            <option value="wildlifeObservation">Wildlife Observation</option>
+          </select>
 
-        <label for="region">SEARCH BY STATE</label>
-        <select id="region" name="stateName">
-          <option value="" selected disabled hidden></option>
-          <option value="northCarolina">North Carolina</option>
-          <option value="minnesota">Minnesota</option>
-          <option value="california">California</option>
-        </select>
+          <label for="region">SEARCH BY STATE</label>
+          <select id="region" name="stateName">
+            <option value="" selected disabled hidden></option>
+            <option value="northCarolina">North Carolina</option>
+            <option value="minnesota">Minnesota</option>
+            <option value="california">California</option>
+          </select>
 
-        <div class="button-container">
-          <!-- Reset button -->
-          <button type="reset" class="reset-button">RESET</button>
+          <div class="button-container">
+            <!-- Reset button -->
+            <button type="reset" class="reset-button">RESET</button>
 
-          <!-- Submit button -->
-          <button type="submit" class="submit-button" onclick="submitForm(event)">SEARCH</button>
-        </div>
+            <!-- Submit button -->
+            <button type="submit" class="submit-button" onclick="submitForm(event)">SEARCH</button>
+          </div>
+        </form>
       </div>
     </div>
     <!--Map Display and logic image call, Commented out until we can get the logic files running-->
     <!--<div id="map-container" style="display: none;">-->
-      <div id="map"></div>
+    <div id="map"></div>
     </div>
   </main>
 
@@ -123,34 +126,48 @@
   <!-- /////////////////////////////////////////////////////// -->
 
   <!-- EDITABLE -->
-<!-- Your script -->
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // Remove this line, as 'map-container' doesn't exist in your HTML
-    // document.getElementById('map-container').style.display = 'block';
+  <!-- Your script -->
+  <script type="text/javascript">
+    // Attach the submitForm function to the form's submit event
+    document.getElementById('parkForm').addEventListener('submit', function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
 
-    // Get references to the dropdowns
-    const parkTypeDropdown = document.getElementById('parkType');
-    const activityTypeDropdown = document.getElementById('activityType');
-    const regionDropdown = document.getElementById('region');
+      // Get the selected value from the dropdown
+      const selectedPark = document.getElementById('parkType').value;
 
-    // Attach event listeners to each dropdown
-    parkTypeDropdown.addEventListener('change', function () {
-      // handleDropdownSelection(parkTypeDropdown, 'park_logic');
+      // Log the selected value (you can replace this with your form submission logic)
+      console.log('Selected Park:', selectedPark);
+
+      // Add your form submission logic here
+      // For example, you might want to update the map based on the selected park
+      ParkMap.updateMap(selectedPark);
     });
 
-    activityTypeDropdown.addEventListener('change', function () {
-      // handleDropdownSelection(activityTypeDropdown, 'activity_logic');
+    document.addEventListener("DOMContentLoaded", function () {
+      // Remove this line, as 'map-container' doesn't exist in your HTML
+      // document.getElementById('map-container').style.display = 'block';
+
+      // Get references to the dropdowns
+      const parkTypeDropdown = document.getElementById('parkType');
+      const activityTypeDropdown = document.getElementById('activityType');
+      const regionDropdown = document.getElementById('region');
+
+      // Attach event listeners to each dropdown
+      parkTypeDropdown.addEventListener('change', function () {
+        // handleDropdownSelection(parkTypeDropdown, 'park_logic');
+      });
+
+      activityTypeDropdown.addEventListener('change', function () {
+        // handleDropdownSelection(activityTypeDropdown, 'activity_logic');
+      });
+
+      regionDropdown.addEventListener('change', function () {
+        // handleDropdownSelection(regionDropdown, 'state_logic');
+      });
     });
 
-    regionDropdown.addEventListener('change', function () {
-      // handleDropdownSelection(regionDropdown, 'state_logic');
-    });
-  });
-</script>
-
-  <!-- Disable the unused dropdowns -->
-  <script>
+    // Disable the unused dropdowns
     document.addEventListener("DOMContentLoaded", function () {
       // Function to disable non-selected dropdowns
       function updateDropdownOptions(selectedDropdown, otherDropdowns) {

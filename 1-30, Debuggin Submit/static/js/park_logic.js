@@ -144,8 +144,26 @@ const ParkMap = {
   }
 };
 
+// Define the submitForm function
+function submitForm(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the selected value from the dropdown
+  const selectedPark = document.getElementById('parkType').value;
+
+  // Log the selected value (you can replace this with your form submission logic)
+  console.log('Selected Park:', selectedPark);
+
+  // For example, you might want to update the map based on the selected park
+  ParkMap.updateMap(selectedPark);
+}
+
+// Attach the submitForm function to the form's submit event
+document.getElementById('parkForm').addEventListener('submit', submitForm);
+
 // Load the URL for the JSON data.
-url = 'https://qbicletkg.github.io/parks-list-data-json-hosting/parks_list.json';
+const url = 'https://qbicletkg.github.io/parks-list-data-json-hosting/parks_list.json';
 
 // Perform a GET request to the query URL
 d3.json(url)
