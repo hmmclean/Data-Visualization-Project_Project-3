@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>National Parks Explorer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Font LATO CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="https://nps.gov">
+          <img src="Images/logo.png" alt="National Parks Explorer Logo">
+        </a>
+        <a href="https://nps.gov">
+          <p>NATIONAL PARK SERVICE</p>
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="https://nps.gov">HOME</a></li>
+          <li><a href="#" onclick="showPopup()">ABOUT</a></li>
+          <li><a href="https://nps.gov/search/?query=&sitelimit=%2F&affiliate=nps">EXPLORE</a></li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- The main content ... -->
+  <main>
+    <div id="container">
+      <img src='Images/titlehero.png' alt="Find your next adventure." width="400">
+      <div class="content-container">
+        <h4>FIND A PARK</h4>
+  
+        <form id="parkForm">
+          <label for="parkType">SEARCH BY PARK</label>
+          <select id="parkType" name="parkName"></select>
+        </form>
+  
+        <form id="activityForm">
+          <label for="activityType">SEARCH BY ACTIVITY</label>
+          <select id="activityType" name="activityName"></select>
+        </form>
+  
+        <form id="stateForm">
+          <label for="region">SEARCH BY STATE</label>
+          <select id="region" name="stateName"></select>
+  
+          <div class="button-container">
+            <!-- Reset button -->
+            <button type="reset" class="reset-button">RESET</button>
+  
+            <!-- Submit button -->
+            <button type="submit" class="submit-button">SEARCH</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Map Display and logic image call should be outside the container -->
+    <div id="map"></div>
+  </main>
+
+  <!-- Popup Container -->
+  <div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>About This Project</h2>
+      <h3>
+        This site is a collaborative effort between the masterminds of: <br><br>
+        ∙ Haylee ("Den Mother") McLean<br>
+        ∙ Quentin ("Q, Qbicle") O'Neal<br>
+        ∙ Tia ("CSS Lover") Scott<br><br>
+        Hopeful graduates of the 2024 UNC Data Analytics Bootcamp.
+      </h3>
+    </div>
+  </div>
+  <!-- /////////////////////////////////////////////////////// -->
+
+  <!-- /////////////////////////////////////////////////////// -->
+  <!-- Leaflet JS and D3 JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Include your park_logic.js file -->
+  <script src="static/js/park_logic.js"></script>
+  <!-- Include your activity_logic.js file -->
+  <!--<script src="static/js/activity_logic.js"></script> -->
+  <!-- Include your state_logic.js file -->
+  <!--<script src="static/js/state_logic.js"></script> -->
+
+  <!-- Include reset logic -->
+  <script src="static/js/reset_logic.js"></script>
+  <!-- Include background logic -->
+  <script src="static/js/background_logic.js"></script>
+  <!-- /////////////////////////////////////////////////////// -->
+
+  <script type="text/javascript">
+    // Define the submitForm function
+    function submitForm(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+  
+      // Get the selected value from the dropdown
+      const selectedPark = document.getElementById('parkType').value;
+  
+      // Log the selected value (you can replace this with your form submission logic)
+      console.log('Selected Park:', selectedPark);
+  
+      // Update the map based on the selected park
+      ParkMap.updateMap(selectedPark);
+    }
+  
+    // Attach the submitForm function to the form's submit event
+    document.addEventListener('DOMContentLoaded', function () {
+  const parkForm = document.getElementById('parkForm');
+  if (parkForm) {
+    parkForm.addEventListener('submit', function (event) {
+      submitForm(event, 'parkType');
+    });
+  } else {
+    console.error('Element with ID "parkForm" not found.');
+  }
+
+  const activityForm = document.getElementById('activityForm');
+  if (activityForm) {
+    activityForm.addEventListener('submit', function (event) {
+      submitForm(event, 'activityType');
+    });
+  } else {
+    console.error('Element with ID "activityForm" not found.');
+  }
+
+  const stateForm = document.getElementById('stateForm');
+  if (stateForm) {
+    stateForm.addEventListener('submit', function (event) {
+      submitForm(event, 'region');
+    });
+  } else {
+    console.error('Element with ID "stateForm" not found.');
+  }
+  
+      // Disable the unused dropdowns
+      function updateDropdownOptions(selectedDropdown, otherDropdowns) {
+        // Get the selected value
+        const selectedValue = selectedDropdown.value;
+  
+        // Reset other dropdowns and disable them
+        otherDropdowns.forEach(function (dropdown) {
+          // Clear selection
+          dropdown.selectedIndex = 0;
+  
+          // Disable the entire dropdown
+          dropdown.disabled = dropdown.id !== selectedDropdown.id;
+        });
+      }
+  
+      // Get references to the dropdowns
+      const parkTypeDropdown = document.getElementById('parkType');
+      const activityTypeDropdown = document.getElementById('activityType');
+      const regionDropdown = document.getElementById('region');
+  
+      // Attach event listeners to each dropdown
+      parkTypeDropdown.addEventListener('change', function () {
+        updateDropdownOptions(parkTypeDropdown, [activityTypeDropdown, regionDropdown]);
+      });
+  
+      activityTypeDropdown.addEventListener('change', function () {
+        console.log('Activity Dropdown Changed');
+        updateDropdownOptions(activityTypeDropdown, [parkTypeDropdown, regionDropdown]);
+      });
+  
+      regionDropdown.addEventListener('change', function () {
+        updateDropdownOptions(regionDropdown, [parkTypeDropdown, activityTypeDropdown]);
+      });
+    });
+  </script>
+
+  <!-- /////////////////////////////////////////////////////// -->
+  <!-- Your existing footer -->
+  <footer>
+    <div class="footer-content">
+      <p>This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
+        attention to their service. This site is not officially affiliated <br> with or endorsed by the National Park
+        Service. For official information, visit the National Park Service's website. All registered trademarks belong
+        to the National Park Service.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
