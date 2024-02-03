@@ -166,18 +166,16 @@ const ParkMap = {
     const parkDropdown = document.getElementById('parkType');
     parkDropdown.innerHTML = ''; // Clear existing options
 
-    const blankOption = document.createElement('option');
-    blankOption.value = '';
-    blankOption.text = '';
-    parkDropdown.add(blankOption);
-
     data.forEach(function (park) {
       const option = document.createElement('option');
       option.value = park.fullName;
       option.text = park.fullName;
-      parkDropdown.add(option);
+      parkDropdown.appendChild(option);
     });
 
+    // Set the default value of the dropdown to an empty string
+    parkDropdown.value = '';
+    
     parkDropdown.addEventListener('change', function () {
       ParkMap.shouldUpdateMap = true;
     });
@@ -188,7 +186,12 @@ const ParkMap = {
 function submitForm(event) {
   event.preventDefault();
   const selectedPark = document.getElementById('parkType').value;
-  console.log('Selected Park:', selectedPark);
+
+  if (selectedPark === '') {
+    // Handle the case where the user didn't select a park
+    alert('Please select a park from the dropdown.');
+    return;
+  }
 
   ParkMap.shouldUpdateMap = true;
 
@@ -197,6 +200,9 @@ function submitForm(event) {
 
   document.getElementById('map-container').style.display = 'block';
 }
+
+// Set the default value of the dropdown to the default placeholder
+document.getElementById('parkType').value = '';
 
 // Attach submitForm function to the form's submit event
 document.addEventListener('DOMContentLoaded', function () {
