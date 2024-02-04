@@ -17,8 +17,9 @@ One key component of data gathering is utilizing the National Parks Service API 
 # References and Resources
 * National Park Service API - https://www.nps.gov/subjects/developer/api-documentation.htm
 * Database system (e.g., MySQL, MongoDB) for data storage.
-* Backend development using Flask.
 * Frontend development with HTML, CSS, and JavaScript.
-* Mapping library (e.g., Leaflet, Google Maps API) for map visualization.
-* Geospatial tools for distance calculations.
+* Mapping libraries for map visualization and geospatial tools for distance calculations.
+* Leaflet - https://leafletjs.com/ 
+* Leaflet Routing Machine - https://www.liedman.net/leaflet-routing-machine/
+* Leaflet Control Geocoder - https://github.com/perliedman/leaflet-control-geocoder 
 * ChatGPT - https://chat.openai.com/
