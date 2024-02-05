@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>National Parks Explorer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+  <!-- Leaflet Control Geocoder CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+ 
+  <!-- Font LATO CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="https://nps.gov">
+          <img src="Images/logo.png" alt="National Parks Explorer Logo">
+        </a>
+        <a href="https://nps.gov">
+          <p>NATIONAL PARK SERVICE</p>
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="https://nps.gov">HOME</a></li>
+          <li><a href="#" onclick="showPopup()">ABOUT</a></li>
+          <li><a href="https://nps.gov/search/?query=&sitelimit=%2F&affiliate=nps">EXPLORE</a></li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- The main content ... -->
+  <main>
+    <div id="container">
+        <img src='Images/titlehero.png' alt="Find your next adventure." width="400">
+
+        <div class="content-container">
+            <h4>FIND A PARK</h4>
+            <form id="parkForm">
+                <label for="parkType">SEARCH BY PARK</label>
+                <select id="parkType" name="parkName"></select>
+            </form>
+        
+            <!-- DO NOT REMOVE ... -->
+            <form id="stateForm">
+                <div class="button-container">
+                </form>
+                    <!-- Reset button -->
+                    <button type="reset" class="reset-button">RESET</button>
+  
+                    <!-- Submit button -->
+                    <button type="submit" class="submit-button">SEARCH</button>
+                </div>
+                <div id="buttons-container">
+                  <!-- Your buttons go here -->
+              
+                  <!-- Start Address Box -->
+                  <label for="startAddress">Start Address:</label>
+                  <input type="text" id="startAddress" placeholder="Enter starting address">
+                  <!-- End Address Box -->
+                  <div id="userInputBox" style="display: none;">
+                    <label for="endAddress">End Address:</label>
+                    <input type="text" id="endAddress" placeholder="Enter destination address">
+                  </div>
+                  <button id="setLocationsButton">Go!</button>
+                </div>
+        </div>
+    </div>
+  
+    <!-- Map Display and logic image call should be outside the container -->
+    <div id="map"></div>
+</main>
+
+
+  <!-- Popup Container -->
+  <div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>About This Project</h2>
+      <h3>
+        This site is a collaborative effort between the masterminds of: <br><br>
+        ∙ Haylee ("Den Mother") McLean<br>
+        ∙ Quentin ("Q, Qbicle") O'Neal<br>
+        ∙ Tia ("CSS Lover") Scott<br><br>
+        Hopeful graduates of the 2024 UNC Data Analytics Bootcamp.
+      </h3>
+    </div>
+  </div>
+  <!-- /////////////////////////////////////////////////////// -->
+
+  <!-- /////////////////////////////////////////////////////// -->
+  <!-- Leaflet JS and D3 JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  <!-- Leaflet Routing Machine JavaScript -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  
+  <!-- Leaflet Control Geocoder JavaScript -->
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+  <!-- Include your park_logic.js file -->
+  <script src="static/js/park_logic.js"></script>
+
+  <!-- Include background logic -->
+  <script src="static/js/background_logic.js"></script>
+  <!-- Include reset logic -->
+  <script src="static/js/reset_logic.js"></script>
+  <!-- Include popup logic -->
+  <script src="static/js/popup_logic.js"></script>
+
+  <!-- /////////////////////////////////////////////////////// -->
+
+  
+  <!-- Custom logic -->
+  <script type="text/javascript">
+    // Define the submitForm function
+    function submitForm(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+  
+      // Get the selected value from the dropdown
+      const selectedPark = document.getElementById('parkType').value;
+  
+      // Log the selected value (you can replace this with your form submission logic)
+      console.log('Selected Park:', selectedPark);
+  
+      // Update the map based on the selected park
+      ParkMap.updateMap(selectedPark);
+    }
+  
+    // Attach the submitForm function to the form's submit event
+    document.addEventListener('DOMContentLoaded', function () {
+  const parkForm = document.getElementById('parkForm');
+  if (parkForm) {
+    parkForm.addEventListener('submit', function (event) {
+      submitForm(event, 'parkType');
+    });
+  } else {
+    console.error('Element with ID "parkForm" not found.');
+  }
+
+  const stateForm = document.getElementById('stateForm');
+  if (stateForm) {
+    stateForm.addEventListener('submit', function (event) {
+      submitForm(event, 'region');
+    });
+  }
+  
+      // Get references to the dropdowns
+      const parkTypeDropdown = document.getElementById('parkType');
+  
+      // Attach event listeners to each dropdown
+      parkTypeDropdown.addEventListener('change', function () {
+      });
+    });
+  </script>
+
+
+  <!-- /////////////////////////////////////////////////////// -->
+  <!-- Your existing footer -->
+  <footer>
+    <div class="footer-content">
+      <p>This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
+        attention to their service. This site is not officially affiliated <br> with or endorsed by the National Park
+        Service. For official information, visit the National Park Service's website. All registered trademarks belong
+        to the National Park Service.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
