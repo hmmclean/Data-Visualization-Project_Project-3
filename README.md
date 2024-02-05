@@ -1,5 +1,5 @@
 # Visualizing America's State Parks
-Exploring America's Natural Wonders: A Comprehensive National Parks Website Project
+## Exploring America's Natural Wonders: A Comprehensive National Parks Website Project
 
 # Overview
 We started with the idea of building a website to help people determine which of America’s national parks to visit. We wanted to show activities, distances, states, directions, and weather. This project aims to create a valuable resource for individuals interested in exploring and learning about the diverse national parks across the United States.
