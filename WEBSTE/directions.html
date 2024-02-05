@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>National Parks Explorer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+  <!-- Leaflet Control Geocoder CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Leaflet Routing Machine JavaScript -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  
+  <!-- Leaflet Control Geocoder JavaScript -->
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+ 
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/direction_styles.css">
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="https://nps.gov">
+          <img src="Images/logo.png" alt="National Parks Explorer Logo">
+        </a>
+        <a href="https://nps.gov">
+          <p>NATIONAL PARK SERVICE</p>
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#" onclick="showPopup()">ABOUT</a></li>
+          <li><a href="directions.html">EXPLORE</a></li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- The main content ... -->
+  <main>
+    <div id="container">
+        <img src='Images/titlehero2.png' alt="Find your next adventure." width="400">
+        
+        <div class="boxes-container">
+          <div class="box1">
+            <!-- Content for the first box with text -->
+            <a href="park.html"> <!-- Add the URL for state search -->
+            <h3 class="box-label">PARK SEARCH</h3>
+          </a>
+          </div>
+          <div class="box2">
+            <!-- Content for the second box with text -->
+            <a href="activity.html"> <!-- Add the URL for state search -->
+            <h3 class="box-label">ACTIVITY SEARCH</h3>
+          </a>
+          </div>
+          <div class="box3">
+            <!-- Content for the second box with text -->
+            <a href="state.html"> <!-- Add the URL for state search -->
+            <h3 class="box-label">STATE SEARCH</h3>
+          </a>
+          </div>
+        </div> 
+
+        <div class="content-container">
+            <h4>GET DIRECTIONS</h4>
+            <!-- Start Address Box -->
+            <label for="startAddress">STARTING ADDRESS:</label>
+            <input type="text" id="startAddress" placeholder="Enter starting address">
+            <div id="userInputBox">
+              <label for="endAddress">END ADDRESS:</label>
+              <input type="text" id="endAddress" placeholder="Enter destination address">
+            </div>
+            
+            <div class="button-container">
+                <!-- Reset button -->
+                <button type="button" class="reset-button" onclick="resetPage()">RESET</button>
+  
+                <!-- Submit button (inside the same form) -->
+                <button type="submit" class="submit-button" id="setLocationsButton" onclick="searchDirections()">SEARCH</button>
+            </div>
+        </div>
+    </div>
+    <!-- Map Display should be outside the container -->
+    <div id="map"></div>
+</main>
+
+  <!-- Popup Container -->
+  <div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>About This Project</h2>
+      <h3>
+        This site is a collaborative effort between the masterminds of: <br><br>
+        ∙ Haylee ("Den Mother") McLean<br>
+        ∙ Quentin ("Q, Qbicle") O'Neal<br>
+        ∙ Tia ("CSS Lover") Scott<br><br>
+        Hopeful graduates of the 2024 UNC Data Analytics Bootcamp.
+      </h3>
+    </div>
+  </div>
+  <!-- /////////////////////////////////////////////////////// -->
+
+  <!-- /////////////////////////////////////////////////////// -->
+<!-- D3 JavaScript -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+  
+<!-- Your JavaScript -->
+<script type="text/javascript" src="static/js/directions_logic.js"></script>
+
+
+  <!-- Include reset logic -->
+  <!--<script src="static/js/reset_logic.js"></script>-->
+  <!-- Include background logic -->
+  <script src="static/js/background_logic.js"></script>
+  <!-- Include popup logic -->
+  <script src="static/js/popup_logic.js"></script>
+
+  <!-- /////////////////////////////////////////////////////// -->
+
+<!-- Your custom JavaScript code -->
+<script>
+  // Define the clearMapLayers function
+  function clearMapLayers() {
+    // Your code to clear map layers
+    // For example, you can remove layers from the map
+  }
+
+  // Define the resetPage function
+  function resetPage() {
+    // Call the clearMapLayers function to clear map layers
+    clearMapLayers();
+
+    // Reset the map view to its initial state
+    myMap.setView([50.0, -100], myMap.options.zoom);
+
+    // Clear the input fields
+    const startAddressInput = document.getElementById('startAddress');
+    const endAddressInput = document.getElementById('endAddress');
+    startAddressInput.value = '';
+    endAddressInput.value = '';
+  }
+</script>
+
+<!-- Your existing footer -->
+<footer>
+  <div class="footer-content">
+    <p>This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
+      attention to their service. This site is not officially affiliated <br> with or endorsed by the National Park
+      Service. For official information, visit the National Park Service's website. All registered trademarks belong
+      to the National Park Service.</p>
+  </div>
+</footer>
+</body>
+
+</html>
