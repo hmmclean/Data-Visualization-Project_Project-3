@@ -8,7 +8,16 @@ We started with the idea to build a website to help people determine which of Am
 # Data Extraction, Transformation, and Loading
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/e6bf7a5a-0747-47d2-8ecd-e06c2d637cae)
 
-One key data-gathering component is utilizing the National Parks Service API to fetch relevant information about national parks and retrieve data such as park names, locations, activities, and other relevant details. After collection, the data was reviewed to ensure consistency and reliability. The data was cleaned up to drop missing or inconsistent data and format the information for seamless integration into the database. DATABASE NAME HERE was chosen to store the cleaned data and create the final output for our website. Using HTML, CSS, and JavaScript, the website was designed to be user-friendly, interactive, and visually appealing while displaying various information about national parks. Creating an integrated mapping functionality to showcase national parks on a map with directions, utilizing geographical data to display parks by state, and allowing users to explore and discover fun activities within the park of their choice. The final outcome will be a fully functional website that provides users with a visually appealing and interactive experience while exploring information about USA National Parks. Users should be able to view parks on a map, filter them by state and activities, and access additional details about each park.
+## Extraction 
+- From the National Park Services API we pulled 6 CSVs:
+   - Activities
+   - Fees and Passes
+   - Park Activities
+   - Parks List
+   - Visitors' Centers
+
+## Transformation
+- After some deliberation as a team, and diving into each spreadsheet, we decided to only keep the Activities database, and to merge the Fees/Passes and Parks List datasets.
 
 # Navigation - need to update!
 * Resources
