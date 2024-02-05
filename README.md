@@ -18,7 +18,7 @@ We started with the idea of building a website to help people determine which of
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/e6bf7a5a-0747-47d2-8ecd-e06c2d637cae)
 
 ## Extraction 
-- We pulled 6 CSVs from the National Park Services API:
+- We pulled 5 CSVs from the National Park Services API:
    - Activities
    - Fees and Passes
    - Park Activities
