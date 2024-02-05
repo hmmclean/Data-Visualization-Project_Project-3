@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 3s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background: #000;
+  color: #fff;
+  padding: 1.25%;
+  text-align: right;
+  position: relative;
+}
+
+nav {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.nav-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Logo Styles */
+nav .nav-left img {
+  max-width: 50px;
+  position: absolute;
+  top: -20px;
+  left: 95px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 150px;
+    top: -80px;
+  }
+}
+
+/* Navigation Text Styles */
+.nav-left p {
+  margin: 0;
+  margin-left: 125px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Link Styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Popup Styles */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Styles */
+#container {
+  width: 400px;
+  margin: 0px 75px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Add a wrapper for content-containers */
+.content-containers-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align containers and text to the bottom */
+  flex-wrap: wrap; /* Allow containers to wrap to the next line if needed */
+  gap: 20px; /* Add spacing between containers */
+  width: 100%; /* Ensure containers take the full width */
+}
+
+/* Content Container Styles */
+.content-container {
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+  flex-direction: column; /* Change flex-direction to column to stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: left; /* Center text */
+  gap: 20px;
+  width: 100%;
+  margin-top: 70px; /* Add margin-bottom to create space */
+  margin-bottom: 35px; /* Add margin-bottom to create space */
+}
+
+/* Content Text Styles */
+.content-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align text at the bottom */
+}
+
+
+/* Heading Styles */
+.find-park-text {
+  margin: 0;
+  color: white;
+  text-align: left; /* Change the text alignment to left */
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Dropdown Label Styles */
+.content-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for each search item container */
+.search-items-container {
+  display: flex; /* Use flex to display items side by side */
+  justify-content: space-between; /* Add space between items */
+  align-items: center; /* Center items vertically */
+  text-align: center; /* Center text */
+  width: 100%; /* Ensure full width */
+}
+
+/* Adjust the margin for the search items */
+.search-item {
+  flex: 1; /* Distribute available space evenly */
+  margin: 0 10px; /* Adjust margin to control spacing around each item */
+  text-align: center; /* Center text */
+}
+
+/* Adjust the width of the images if needed */
+.search-item img {
+  margin: 0; /* Remove margin to avoid extra spacing */
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 400px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 3s ease; /* Add smooth transition for slide effect */
+}
+
+/* Style for carousel items */
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* Center horizontally */
+  bottom: 0; /* Center vertically */
+  display: none;
+  text-align: center; /* Center text content */
+}
+
+/* Center the content in the carousel items */
+.carousel-item img {
+  display: inline-block; /* Make images inline-block */
+  vertical-align: middle; /* Center vertically */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.carousel-label {
+  text-align: center;
+}
+
+/* Styles for Carousel Navigation */
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Style for custom carousel navigation buttons */
+.custom-carousel-button {
+  background: none;
+  border: none;
+  font-size: 0; /* Hide text content */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 2s ease;
+}
+
+/* Style for custom left button */
+.custom-carousel-button-prev {
+  position: absolute;
+  left: 10px; /* Adjust the position as needed */
+  top: 50%;
+  transform: translateY(-125%);
+}
+
+/* Style for custom right button */
+.custom-carousel-button-next {
+  position: absolute;
+  right: 25px; /* Adjust the position as needed */
+  top: 50%;
+  transform: translateY(-125%);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000;
+  padding: 1em;
+  font-family: 'Lato', sans-serif;
+  padding: 0px;
+}
+
+/* Footer Content Styles */
+.footer-content {
+  color: #979797;
+  text-align: right;
+  font-size: 8px;
+  margin-right: 10px;
+}

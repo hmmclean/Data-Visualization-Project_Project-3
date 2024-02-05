@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>National Parks Explorer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Font LATO CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/index.css">
+
+  <!-- Preload Images CSS -->
+  <link rel="preload" href="Images/park_icon.png" as="image">
+  <link rel="preload" href="Images/activity_icon.png" as="image">
+  <link rel="preload" href="Images/state_icon.png" as="image">
+
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="https://nps.gov">
+          <img src="Images/logo.png" alt="National Parks Explorer Logo">
+        </a>
+        <a href="https://nps.gov">
+          <p>NATIONAL PARK SERVICE</p>
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="https://nps.gov">HOME</a></li>
+          <li><a href="#" onclick="showPopup()">ABOUT</a></li>
+          <li><a href="https://nps.gov/search/?query=&sitelimit=%2F&affiliate=nps">EXPLORE</a></li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- The main content ... -->
+  <main>
+    <div id="container">
+      <img src='Images/titlehero.png' alt="Find your next adventure." width="400">
+      <div class="content-container">
+  
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+          <!-- Custom Carousel Navigation Buttons -->
+          <button class="custom-carousel-button custom-carousel-button-prev" onclick="prevSlide()">
+            <!-- Custom Left Arrow -->
+            <img src="Images/arrow_left.png" alt="Previous" height="75">
+          </button>
+          <!-- Carousel Content (for sliding) -->
+          <div class="carousel-content">
+            <!-- Use the search items as carousel items -->
+            <div class="carousel-item">
+              <img src='Images/park_icon.png' alt="Find your next adventure." width="165", data-src="Images/park_icon.png">
+              <div class="carousel-label">
+                <label for="parkType">SEARCH BY PARK</label>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src='Images/activity_icon.png' alt="Find your next adventure." width="165", data-src="Images/activity_icon.png">
+              <div class="carousel-label">
+                <label for="activityType">SEARCH BY ACTIVITY</label>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src='Images/state_icon.png' alt="Find your next adventure." width="165", data-src="Images/state_icon.png">
+              <div class="carousel-label">
+                <label for="region">SEARCH BY STATE</label>
+              </div>
+            </div>
+          </div>
+          <button class="custom-carousel-button custom-carousel-button-next" onclick="nextSlide()">
+            <!-- Custom Right Arrow -->
+            <img src="Images/arrow_right.png" alt="Next" height="75">
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  <!-- Popup Container -->
+  <div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>About This Project</h2>
+      <h3>
+        This site is a collaborative effort between the masterminds of: <br><br>
+        ∙ Haylee ("Den Mother") McLean<br>
+        ∙ Quentin ("Q, Qbicle") O'Neal<br>
+        ∙ Tia ("CSS Lover") Scott<br><br>
+        Hopeful graduates of the 2024 UNC Data Analytics Bootcamp.
+      </h3>
+    </div>
+  </div>
+  <!-- /////////////////////////////////////////////////////// -->
+
+  <!-- /////////////////////////////////////////////////////// -->
+  <!-- Leaflet JS and D3 JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Include jQuery library (you can include it from a CDN) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include background logic -->
+  <script src="static/js/background_logic.js"></script>
+  <!-- Include popup logic -->
+  <script src="static/js/popup_logic.js"></script>
+  <!-- Include view arrow logic -->
+  <script src="static/js/view_logic.js"></script>
+
+  <!-- /////////////////////////////////////////////////////// -->
+
+<!-- Your existing footer -->
+<footer>
+  <div class="footer-content">
+    <p>This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
+      attention to their service. This site is not officially affiliated <br> with or endorsed by the National Park
+      Service. For official information, visit the National Park Service's website. All registered trademarks belong
+      to the National Park Service.</p>
+  </div>
+</footer>
+</body>
+
+</html>
