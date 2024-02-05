@@ -34,10 +34,10 @@ We started with the idea of building a website to help people determine which of
 
 # References and Resources
 * [National Park Service API](https://www.nps.gov/subjects/developer/api-documentation.htm)
-* Database system (MongoDB) for data storage - www.mongodb.com 
+* [Database system (MongoDB) for data storage](www.mongodb.com) 
 * Frontend development with HTML, CSS, and JavaScript.
 * Mapping libraries for map visualization and geospatial tools for distance calculations.
-     * Leaflet - https://leafletjs.com/ 
-     * Leaflet Routing Machine - https://www.liedman.net/leaflet-routing-machine/
-     * Leaflet Control Geocoder - https://github.com/perliedman/leaflet-control-geocoder 
-* ChatGPT - https://chat.openai.com/
+     * [Leaflet](https://leafletjs.com/) 
+     * [Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/)
+     * [Leaflet Control Geocoder](https://github.com/perliedman/leaflet-control-geocoder) 
+* [ChatGPT](https://chat.openai.com/)
