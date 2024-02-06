@@ -12,9 +12,10 @@ We started with the idea of building a website to help people determine which of
     * Data Sources - JSONs of final cleaned data. These are being hosted on a separate GitHub repo ([Activities](https://github.com/QbicleTKG/activities-data-json-hosting) and [Parks List](https://github.com/QbicleTKG/parks-list-data-json-hosting)).
     * Uncleaned - CSVs of data pulled from the NPS API.
     * NPS_API_Data_Pull - Code used to pull the data from the NPS API.
+ * WEBSITE - HTML, JS, and CSS source documentation for our website. 
 * Project Rubric - Text file containing the standards for our assignment.
 * Data Transformation Jupyter Notebook - main code used for initial data cleaning.
-* MongoApp
+* MongoApp - PyMongo Jupyter Notebook used to provide information on loading cleaned CSVs into MongoDB and JSONifying them.
 * Folder - provided folder containing javascript app.
         * app - javascript file that imports the data from the JSON file and creates all the dashboards linked to the HTML file.
 
@@ -33,7 +34,8 @@ We started with the idea of building a website to help people determine which of
 - After some deliberation as a team and diving into each spreadsheet, we decided to keep only the Activities database and to merge the Fees/Passes and Parks List datasets.
 
 ## Load
-- Once data cleaning was complete, the data was loaded into MongoDB and JSONified via PyMongo. We chose MongoDB due to the ease with which it can be integrated into Python/Jupyter Notebooks using PyMongo. The JSON files were hosted on separate Github repos to allow easy access to the data for website construction. 
+- Once data cleaning was complete, the data was loaded into MongoDB and JSONified via PyMongo. We chose MongoDB due to the ease with which it can be integrated into Python/Jupyter Notebooks using PyMongo. The JSON files were hosted on separate Github repos to allow easy access to the data for website construction.
+### Note! If you are attempting this project yourself given the data here, the two code lines you need to upload the cleaned CSVs are ```mongoimport --type csv -d national_parks -c parks_list --drop --headerline --file parks_list_cleaned.csv```, and ```mongoimport --type csv -d national_parks -c activities --drop --headerline --file activities.csv```.
 
 # Website Design
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/d7ce8044-8f35-4573-a38b-736bf1a8455b)
