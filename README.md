@@ -18,7 +18,9 @@ We started with the idea of building a website to help people determine which of
 * MongoApp - PyMongo Jupyter Notebook used to provide information on loading cleaned CSVs into MongoDB and JSONifying them.
 
 # Data Extraction, Transformation, and Loading
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/e6bf7a5a-0747-47d2-8ecd-e06c2d637cae){width=300}
+- Below is a representation of our DTL process
+<img src="[https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/e6bf7a5a-0747-47d2-8ecd-e06c2d637cae](https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png)" width="300">
+
 
 ## Extraction 
 - We pulled 5 CSVs from the National Park Services API:
