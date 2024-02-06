@@ -1,7 +1,7 @@
 # Visualizing America's State Parks
 ## Exploring America's Natural Wonders: A Comprehensive National Parks Website Project
 
-[View our Website Here!](https://hmmclean.github.io/Data-Visualization-Project_Project-3/WEBISTE/index.html)
+[View our Website Here!](https://hmmclean.github.io/Data-Visualization-Project_Project-3/WEBSITE/index.html)
 
 # Overview
 We started with the idea of building a website to help people determine which of America’s national parks to visit. We wanted to show activities, distances, states, directions, and weather. This project aims to create a valuable resource for individuals interested in exploring and learning about the diverse national parks across the United States.
