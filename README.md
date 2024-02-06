@@ -22,6 +22,12 @@ We started with the idea of building a website to help people determine which of
 <p align="center">
     <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png" width="650">
     </p>
+<br>
+<br>
+- Below is the actual representation of our filtering process
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/filter%20logic2.png" width="500">
+    </p>
 
 
 ## Extraction 
