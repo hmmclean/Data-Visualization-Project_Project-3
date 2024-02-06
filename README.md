@@ -16,8 +16,6 @@ We started with the idea of building a website to help people determine which of
 * Project Rubric - Text file containing the standards for our assignment.
 * Data Transformation Jupyter Notebook - main code used for initial data cleaning.
 * MongoApp - PyMongo Jupyter Notebook used to provide information on loading cleaned CSVs into MongoDB and JSONifying them.
-* Folder - provided folder containing javascript app.
-        * app - javascript file that imports the data from the JSON file and creates all the dashboards linked to the HTML file.
 
 # Data Extraction, Transformation, and Loading
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/e6bf7a5a-0747-47d2-8ecd-e06c2d637cae)
