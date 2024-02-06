@@ -20,7 +20,7 @@ We started with the idea of building a website to help people determine which of
 # Data Extraction, Transformation, and Loading
 - Below is a representation of our DTL process
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png" width="850">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png" width="650">
     </p>
 
 
@@ -42,7 +42,7 @@ We started with the idea of building a website to help people determine which of
 # Website Outline
 - Below is a representation of our process for filtering data and how our website logic might look.
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/filter%20logic1.png" width="750">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/filter%20logic1.png" width="900">
     </p> 
 
 
