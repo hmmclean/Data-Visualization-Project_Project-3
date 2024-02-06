@@ -93,9 +93,25 @@ We started with the idea of building a website to help people determine which of
 - This page is the main index of the site. The page is set up to loop through a carousel so you can pick how you want to search for the park. Additional functionality includes linking to the National Park Service through the logo and hypertext in the main navigation. The "Home", "About", and "Explore" offer links directly through this site. The home button directs you back to the index page, the about page presents a popup that talks about the project team, and the explore takes you to the directions page.
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/index.png" width="500">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/index.png" width="600">
     </p>
-
+<br>
+<br>
+#### Parks page
+- This page uses the dropdown to search alphabetically for a park. 
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks1.png" width="600">
+    </p>
+<br>
+- Once you have located a park, additional information is available in the popup. A shortened description turns into a full description when you click "read more", and the carats expand to go straight to the park website, look at the park activities, and use google maps to get directions to the park.
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks2.png" width="600">
+    </p>
+<br>
 
 
 
