@@ -20,7 +20,7 @@ We started with the idea of building a website to help people determine which of
 # Data Extraction, Transformation, and Loading
 - Below is a representation of our DTL process
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png" width="500">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png" width="650">
     </p>
 
 
