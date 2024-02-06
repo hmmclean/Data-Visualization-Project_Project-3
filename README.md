@@ -104,6 +104,7 @@ We started with the idea of building a website to help people determine which of
     <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks1.png" width="600">
     </p>
 <br>
+
 - Once you have located a park, additional information is available in the popup. A shortened description turns into a full description when you click "read more", and the carats expand to go straight to the park website, look at the park activities, and use google maps to get directions to the park.
 <br>
 <br>
