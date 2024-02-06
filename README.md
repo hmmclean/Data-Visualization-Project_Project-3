@@ -35,13 +35,46 @@ We started with the idea of building a website to help people determine which of
 - Once data cleaning was complete, the data was loaded into MongoDB and JSONified via PyMongo. We chose MongoDB due to the ease with which it can be integrated into Python/Jupyter Notebooks using PyMongo. The JSON files were hosted on separate Github repos to allow easy access to the data for website construction.
 ### Note! If you are attempting this project yourself given the data here, the two code lines you need to upload the cleaned CSVs are ```mongoimport --type csv -d national_parks -c parks_list --drop --headerline --file parks_list_cleaned.csv```, and ```mongoimport --type csv -d national_parks -c activities --drop --headerline --file activities.csv```.
 
-# Website Design
+# Website Outline
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/d7ce8044-8f35-4573-a38b-736bf1a8455b)
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/4f5b8ee5-f045-4289-96ca-d245eb293e72)
 
 
 
+# Website Development
 
+## WEBSITE Navigation 
+* ROOT>
+    * index.html - Main landing page
+    * park.html - Park name search
+    * activity.html - Activity search
+    * State.html - State search
+    * directions.html - Directions to park
+    * Images Folder
+       * Folder with images for the entire site
+    * Static Folder
+        * CSS Folder
+           * Index.css - CSS styles for the index page
+           * parkstyles.css - CSS styles for the parks page
+           * activitystyles.css - CSS styles for the activities page
+           * statestyles.css - CSS styles for the states page
+           * direction_styles.css - CSS styles for the directions page
+      * JS Folder
+           * MAIN LOGIC FOR PAGE FUNCTIONALITY
+              *  background_logic.js - Script that rotates the background of all the pages
+              *  popup_logic.js - Script that handles the popup for the about portion of the page
+           * view_logic.js - Script that handles the carousel for the index page
+           * park_logic.js - Script that handles the dropdown, filtering and map for the park page
+           * park_reset_logic.js - Script that resets the parks page back to initializaiton state
+           * activity_logic.js - Script that handles the dropdown, filtering and map for the activity page
+           * activity_reset_logic.js - Script that resets the activity page back to initializaiton state
+           * state_logic.js - Script that handles the dropdown, filtering and map for the state page
+           * state_reset_logic.js - Script that resets the state page back to initializaiton state
+           * directions_logic.js - Script that handles the map for the directions page
+           * directions_reset.js - Script that resets the activity page back to initializaiton state *only clears icons as the app is in dev and layers are buggy*
+
+
+  
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/004d68a4-ee24-452d-b237-10b37a6d1b93)
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/c20af58c-26af-44d5-b5da-01a883e350c0)
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/db2e2d33-c226-496c-8a3f-69b811038945)
