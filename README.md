@@ -40,6 +40,28 @@ We started with the idea of building a website to help people determine which of
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/4f5b8ee5-f045-4289-96ca-d245eb293e72)
 
 
+
+
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/004d68a4-ee24-452d-b237-10b37a6d1b93)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/c20af58c-26af-44d5-b5da-01a883e350c0)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/db2e2d33-c226-496c-8a3f-69b811038945)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/8dadd42d-6ea5-437b-b63b-067abcc8278b)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/b24df98a-029c-4f69-a797-269bcf3e6538)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/e99617e7-e85d-4572-9e77-4e9d3cf2271b)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/1125f6b2-9102-42ca-9de1-21803fdc9363)
+![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/2669a1eb-ff3b-43ad-9776-8879d2aefa8e)
+
+
+
+
+
+
+
+
+
+
+
+
 # References and Resources
 * [National Park Service API](https://www.nps.gov/subjects/developer/api-documentation.htm)
 * [Database system (MongoDB) for data storage](www.mongodb.com) 
