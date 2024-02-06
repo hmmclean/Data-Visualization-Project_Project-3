@@ -16,6 +16,7 @@ We started with the idea of building a website to help people determine which of
 * Project Rubric - Text file containing the standards for our assignment.
 * Data Transformation Jupyter Notebook - main code used for initial data cleaning.
 * MongoApp - PyMongo Jupyter Notebook used to provide information on loading cleaned CSVs into MongoDB and JSONifying them.
+* Assets - Images belonging to the repo.
 
 # Data Extraction, Transformation, and Loading
 - Below is a representation of our DTL process
@@ -56,6 +57,8 @@ We started with the idea of building a website to help people determine which of
 # Website Development
 
 ## WEBSITE Navigation 
+- Once data was JSONified wireframes were created to contain the main navigation wiring, content containers, map containers, headers and footers. A main page was created as well as a main CSS for implementing color, styling and event specific handling, such as mozilla neglect. Once the main page was created other pages were created and modified to fit the page requirements. Images were created and added at this point. Once the page was built, functionality was added to populate the dropdowns, return map logic, reset the page and navigate away from the page. Other functionality was built such as background_logic.js and popup_logic.js to handle non-page specific requirements. 
+
 * ROOT>
     * index.html - Main landing page
     * park.html - Park name search
@@ -85,19 +88,13 @@ We started with the idea of building a website to help people determine which of
            * directions_logic.js - Script that handles the map for the directions page
            * directions_reset.js - Script that resets the activity page back to initializaiton state *only clears icons as the app is in dev and layers are buggy*
 
-
-  
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/004d68a4-ee24-452d-b237-10b37a6d1b93)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/c20af58c-26af-44d5-b5da-01a883e350c0)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/db2e2d33-c226-496c-8a3f-69b811038945)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/8dadd42d-6ea5-437b-b63b-067abcc8278b)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/b24df98a-029c-4f69-a797-269bcf3e6538)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/e99617e7-e85d-4572-9e77-4e9d3cf2271b)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/1125f6b2-9102-42ca-9de1-21803fdc9363)
-![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/145622440/2669a1eb-ff3b-43ad-9776-8879d2aefa8e)
-
-
-
+## WEBSITE Survey
+#### Main index page
+- This page is the main index of the site. The page is set up to loop through a carousel so you can pick how you want to search for the park. Additional functionality includes linking to the National Park Service through the logo and hypertext in the main navigation. The "Home", "About", and "Explore" offer links directly through this site. The home button directs you back to the index page, the about page presents a popup that talks about the project team, and the explore takes you to the directions page.
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/index.png" width="500">
+    </p>
 
 
 
