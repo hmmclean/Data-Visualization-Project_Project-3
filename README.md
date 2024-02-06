@@ -29,7 +29,7 @@ We started with the idea of building a website to help people determine which of
 - After some deliberation as a team and diving into each spreadsheet, we decided to keep only the Activities database and to merge the Fees/Passes and Parks List datasets.
 
 ## Load
-- Once data cleaning was complete, the data was loaded into MongoDB and JSONified via PyMongo. The JSON files were hosted on separate Github repos to allow easy access to the data for website construction. 
+- Once data cleaning was complete, the data was loaded into MongoDB and JSONified via PyMongo. We chose MongoDB due to the ease with which it can be integrated into Python/Jupyter Notebooks using PyMongo. The JSON files were hosted on separate Github repos to allow easy access to the data for website construction. 
 
 # Website Design
 ![image](https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/d7ce8044-8f35-4573-a38b-736bf1a8455b)
