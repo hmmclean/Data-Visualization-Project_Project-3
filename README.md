@@ -1,17 +1,20 @@
 # Visualizing America's State Parks
 ## Exploring America's Natural Wonders: A Comprehensive National Parks Website Project
 
-[View our Website Here!](https://hmmclean.github.io/Data-Visualization-Project_Project-3/WEBISTE/index.html)
+[View our Website Here!](https://hmmclean.github.io/Data-Visualization-Project_Project-3/WEBSITE/index.html)
 
 # Overview
 We started with the idea of building a website to help people determine which of America’s national parks to visit. We wanted to show activities, distances, states, directions, and weather. This project aims to create a valuable resource for individuals interested in exploring and learning about the diverse national parks across the United States.
 
-# Navigation - need to update!
+# Repo Navigation 
 * Resources
     * Cleaned - CSVs of final cleaned data.
-    * Data Sources - jsons of final cleaned data.
+    * Data Sources - JSONs of final cleaned data. These are being hosted on a separate GitHub repo ([Activities](https://github.com/QbicleTKG/activities-data-json-hosting) and [Parks List](https://github.com/QbicleTKG/parks-list-data-json-hosting)
     * Uncleaned - CSVs of data pulled from the NPS API.
     * NPS_API_Data_Pull - Code used to pull the data from the NPS API.
+* Project Rubric - Text file containing the standards for our assignment.
+* Data Transformation Jupyter Notebook - main code used for initial data cleaning.
+* 
 * MongoApp
 * Folder - provided folder containing javascript app.
         * app - javascript file that imports the data from the JSON file and creates all the dashboards linked to the HTML file.
