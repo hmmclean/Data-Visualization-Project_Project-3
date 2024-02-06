@@ -19,7 +19,9 @@ We started with the idea of building a website to help people determine which of
 
 # Data Extraction, Transformation, and Loading
 - Below is a representation of our DTL process
-<img src="[https://github.com/hmmclean/Data-Visualization-Project_Project-3/assets/139186713/e6bf7a5a-0747-47d2-8ecd-e06c2d637cae](https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png)" width="300">
+<p align="center">
+    <img src="[https://github.com/tiascott01/15_Leaflet_Challenge/blob/main/Images/Leaflet.png](https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/DTLpng.png)" width="500">
+    </p>
 
 
 ## Extraction 
