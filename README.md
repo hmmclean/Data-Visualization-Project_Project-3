@@ -95,8 +95,7 @@ We started with the idea of building a website to help people determine which of
 <p align="center">
     <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/index.png" width="600">
     </p>
-<br>
-<br>
+
 #### Parks page
 - This page uses the dropdown to search alphabetically for a park. 
 <br>
@@ -110,6 +109,24 @@ We started with the idea of building a website to help people determine which of
 <br>
 <p align="center">
     <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks2.png" width="600">
+    </p>
+<br>
+
+#### Actvity page
+- This page uses the dropdown to search for an activity and return a list of parks that off the activity. 
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/activity.png" width="600">
+    </p>
+<br>
+
+#### State page
+- This page uses the dropdown to search a state and return a list of parks that are in that state. One note is that markers outside the state are trails that travel through the state, however the marker is showing you the main visitors center for the trail. 
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/state.png" width="600">
     </p>
 <br>
 
