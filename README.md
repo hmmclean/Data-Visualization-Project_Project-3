@@ -9,12 +9,11 @@ We started with the idea of building a website to help people determine which of
 # Repo Navigation 
 * Resources
     * Cleaned - CSVs of final cleaned data.
-    * Data Sources - JSONs of final cleaned data. These are being hosted on a separate GitHub repo ([Activities](https://github.com/QbicleTKG/activities-data-json-hosting) and [Parks List](https://github.com/QbicleTKG/parks-list-data-json-hosting)
+    * Data Sources - JSONs of final cleaned data. These are being hosted on a separate GitHub repo ([Activities](https://github.com/QbicleTKG/activities-data-json-hosting) and [Parks List](https://github.com/QbicleTKG/parks-list-data-json-hosting)).
     * Uncleaned - CSVs of data pulled from the NPS API.
     * NPS_API_Data_Pull - Code used to pull the data from the NPS API.
 * Project Rubric - Text file containing the standards for our assignment.
 * Data Transformation Jupyter Notebook - main code used for initial data cleaning.
-* 
 * MongoApp
 * Folder - provided folder containing javascript app.
         * app - javascript file that imports the data from the JSON file and creates all the dashboards linked to the HTML file.
