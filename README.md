@@ -94,7 +94,7 @@ We started with the idea of building a website to help people determine which of
 - This page is the main index of the site. The page is set up to loop through a carousel so you can pick how you want to search for the park. Additional functionality includes linking to the National Park Service through the logo and hypertext in the main navigation. The "Home", "About", and "Explore" offer links directly through this site. The home button directs you back to the index page, the about page presents a popup that talks about the project team, and the explore takes you to the directions page.
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/index.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/index.png" width="700">
     </p>
 
 #### Parks page
@@ -102,7 +102,7 @@ We started with the idea of building a website to help people determine which of
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks1.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks1.png" width="700">
     </p>
 <br>
 
@@ -110,7 +110,7 @@ We started with the idea of building a website to help people determine which of
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks2.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/parks2.png" width="700">
     </p>
 <br>
 
@@ -119,7 +119,7 @@ We started with the idea of building a website to help people determine which of
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/activity.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/activity.png" width="700">
     </p>
 <br>
 
@@ -128,7 +128,7 @@ We started with the idea of building a website to help people determine which of
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/state.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/state.png" width="700">
     </p>
 <br>
 
@@ -137,7 +137,7 @@ We started with the idea of building a website to help people determine which of
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving1.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving1.png" width="700">
     </p>
 <br>
 
@@ -145,13 +145,13 @@ We started with the idea of building a website to help people determine which of
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving2.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving2.png" width="700">
     </p>
 <br>
 <br>
 <br>
 <p align="center">
-    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving3.png" width="600">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving3.png" width="700">
     </p>
 <br>
 
