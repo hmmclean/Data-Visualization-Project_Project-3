@@ -47,6 +47,7 @@ We started with the idea of building a website to help people determine which of
     </p> 
 <br>
 <br>
+
 - Below is the actual representation of our filtering process
 <p align="center">
     <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/filter%20logic2.png" width="500">
@@ -131,9 +132,28 @@ We started with the idea of building a website to help people determine which of
     </p>
 <br>
 
+#### Directions page
+- This page uses the map to search the listed parks. To use the directions, click open the popup for the park and click the bottom hyperlink. From there you can add your starting address above the populated container. The search button will return one or more options for driving directions to the park from your loaded destination. 
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving1.png" width="600">
+    </p>
+<br>
 
-
-
+- To use the directions, click open the popup for the park and click the bottom hyperlink. From there you can add your starting address above the populated container. The search button will return one or more options for driving directions to the park from your loaded destination. 
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving2.png" width="600">
+    </p>
+<br>
+<br>
+<br>
+<p align="center">
+    <img src="https://github.com/hmmclean/Data-Visualization-Project_Project-3/blob/main/Assets/driving3.png" width="600">
+    </p>
+<br>
 
 
 
