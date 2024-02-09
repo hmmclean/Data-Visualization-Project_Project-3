@@ -156,7 +156,7 @@ We started with the idea of building a website to help people determine which of
 <br>
 
 # Project Role Overview
-- A summarry of efforts for the State Parks Project
+- A summary of efforts for the State Parks Project
 
  * State Parks Project
     * Repo Organizer - Haylee McLean
