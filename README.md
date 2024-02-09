@@ -155,7 +155,25 @@ We started with the idea of building a website to help people determine which of
     </p>
 <br>
 
+# Project Role Overview
+- A summarry of efforts for the State Parks Project
 
+ * State Parks Project
+    * Repo Organizer - Haylee McLean
+    * Presentation - Haylee McLean
+    * ReadMe - Quentin O'Neal
+    * GitHub Pages - Quentin O'Neal
+    * Extraction - Quentin O'Neal, Haylee McLean
+    * Transformation - Quentin O'Neal
+    * Loading - Quentin O'Neal
+    * HTML - Tia Scott
+    * CSS - Tia Scott
+    * Park Logic - Haylee McLean
+    * Activity Logic - Tia Scott
+    * STate Logic - Tia Scott
+    * Directions Logic - Haylee McLean
+    * Other Java Script Logic - Tia Scott
+    * Testing - Quetin O'Neal
 
 
 # References and Resources
