@@ -187,10 +187,10 @@ We started with the idea of building a website to help people determine which of
      * Lastly since this is a school project, we are not seeking payment, selling, merchandising, and have fully cited our sources and recognition of the true owners of the trademarks.
      * Should we desire to implement this in the larger open public space, appropriate permission would be requested to use the NPS Arrowhead, service marks and any other pertinet trademarks. <https://www.nps.gov/subjects/partnerships/arrowhead-requests.htm#:~:text=The%20Arrowhead%20Symbol%20is%20the,Federal%20Regulations%20(36%20CFR)>
 
-       **This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
+       *"This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
       attention to their service. This site is not officially affiliated with or endorsed by the National Park
       Service. For official information, visit the National Park Service's website. All registered trademarks belong
-      to the National Park Service.**
+      to the National Park Service."*
  
 
 
