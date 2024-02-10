@@ -181,6 +181,7 @@ We started with the idea of building a website to help people determine which of
      * We did not use web-scraping for any data related to our project.
      * While we did use the National Parks Logo for our project, a disclaimer was added to protect the service mark and trademark of the rights to the logo, 
        which belong to the NPS and are fully disclosed.
+     * All pictures were purchased through IStock.com or created from scratch.
      * We also included a disclaimer that we were not officially affiliated with or endorsed by the National Parks Service.
      * Lastly since this is a school project, we are not seeking payment, selling, merchandising, and have fully cited our sources and recognition of the true owners of the trademarks.
      * Should we desire to implement this in the larger open public space, appropriate permission would be requested to use the NPS Arrowhead, service marks and any other pertinet trademarks. <https://www.nps.gov/subjects/partnerships/arrowhead-requests.htm#:~:text=The%20Arrowhead%20Symbol%20is%20the,Federal%20Regulations%20(36%20CFR)>
