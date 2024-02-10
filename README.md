@@ -176,16 +176,16 @@ We started with the idea of building a website to help people determine which of
     * Testing - Quetin O'Neal
 
 # Ethical Considerations
-- In the process of creating our website and visulizations, we attempted to create this project with the utmost consideration for both legal and ethical practices. Given the complexity of many projects and the source of data, we took several steps to ensure that we did not infringe on either of these duplicitous practices. The steps we did to make sure our project was in compliance were:
+- In the process of creating our website and visulizations, we attempted to create this project with the utmost consideration for both legal and ethical practices. Given the complexity of this project we took several steps to ensure that we did not infringe on either of these duplicitous practices. The steps we did to make sure our project was in compliance were:
   
      * We used the National Parks Service API to gather our data directly from the source.
-     * We did not use web-scraping for any data related to our project.
+     * We did not use any web-scraping for any of the data related to our project.
      * While we did use the National Parks Logo for our project, a disclaimer was added to protect the service mark and trademark of the rights to the logo, 
        which belong to the NPS and are fully disclosed.
      * All pictures were purchased through IStock.com or created from scratch.
      * We also included a disclaimer that we were not officially affiliated with or endorsed by the National Parks Service on every page.
-     * Lastly since this is a school project, we are not seeking payment, selling, merchandising, and have fully cited our sources and recognition of the true owners of the trademarks.
-     * Should we desire to implement this in the larger open public space, appropriate permission would be requested to use the NPS Arrowhead, service marks and any other pertinet trademarks. <https://www.nps.gov/subjects/partnerships/arrowhead-requests.htm#:~:text=The%20Arrowhead%20Symbol%20is%20the,Federal%20Regulations%20(36%20CFR)>
+     * Lastly since this is a school project, we are not seeking payment, selling, or merchandising this website, and have fully cited our sources and recognition of the true owners of the trademarks.
+     * Should we desire to implement this in the larger open public space, appropriate permission would be requested for the use of the NPS Arrowhead, service marks and any other pertinet trademarks. <https://www.nps.gov/subjects/partnerships/arrowhead-requests.htm#:~:text=The%20Arrowhead%20Symbol%20is%20the,Federal%20Regulations%20(36%20CFR)>
 
        *"This website celebrates our National Parks, and the National Park Service logo is used in conjunction to call
       attention to their service. This site is not officially affiliated with or endorsed by the National Park
